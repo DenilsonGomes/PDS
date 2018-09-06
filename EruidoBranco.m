@@ -11,13 +11,13 @@ xlabel('Tempo Discreto')
 
 % Gerar o ruido
 ruido_branco = randn(size(x));
-ruido_branco = (ruido_branco - mean(ruido_branco))/std(ruido_branco);
+ruido_branco = (ruido_branco - mean(ruido_branco))/10*std(ruido_branco);
 figure,plot(n,ruido_branco) %Plota o ruido
 ylabel('Amplitude do Ruido')
 xlabel('Tempo Discreto')
 
 % Adicionar ruido
-y_ruido = y + ruido_branco*sqrt(1); %Adiciona o ruido
+y_ruido = x + ruido_branco*sqrt(1); %Adiciona o ruido
 figure,plot(n,y_ruido) %Plota o sinal junto ao ruido
 ylabel('Amplitude do Sinal com ruido')
 xlabel('Tempo Discreto')
