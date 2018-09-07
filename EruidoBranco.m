@@ -35,8 +35,8 @@ xlabel('Frequencia')
 %Filtrar o sinal com ruido
 y_ruido_filtrado = filter(B,A,y_ruido); %Filtra o sinal com ruido
 figure,plot(n,y_ruido_filtrado) %Plota o sinal filtrado
-ylabel('Fase do sinal Filtrado')
-xlabel('Frequencia')
+ylabel('Amplitude do sinal Filtrado')
+xlabel('tempo')
 
 Yw_ruido_filtrado = fftshift(fft(y_ruido_filtrado)); %Transformada de Fourier do sinal filtrado
 figure,plot(freq_vec,abs(Yw_ruido_filtrado)) %plota o modulo do sinal filtrado
